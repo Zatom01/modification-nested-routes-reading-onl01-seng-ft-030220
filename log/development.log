@@ -3876,3 +3876,31 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/posts/17" for 71.89.235.63 at 2020-05-26 06:40:03 +0000
+Cannot render console from 71.89.235.63! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for 71.89.235.63 at 2020-05-26 06:40:08 +0000
+Cannot render console from 71.89.235.63! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7IqH0ad+wLbbQluRm5lF6kMGEToZNuAB60Y2UNd9Aag3ZPZ9wzncabMs22Go3/+LHEKRUFKu9ZTedOO6eYy1bw==", "post"=>{"title"=>"Hot day", "description"=>" 100 degrees today"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hot Day"], ["description", " 100 degrees today"], ["created_at", "2020-05-26 06:40:08.425149"], ["updated_at", "2020-05-26 06:40:08.425149"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.60.187:37115/posts/18
+Completed 302 Found in 10ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/posts/18" for 71.89.235.63 at 2020-05-26 06:40:08 +0000
+Cannot render console from 71.89.235.63! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
